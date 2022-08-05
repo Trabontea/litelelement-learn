@@ -1,7 +1,9 @@
 import {format} from 'timeago.js';
-import {directive, AsyncDirective} from 'lit/async-directive.js';
+import { asyncAppend } from 'lit-html/directives/async-append.js';
 
-class TimeAgoDirective extends AsyncDirective  {
+
+
+class TimeAgoDirective extends asyncAppend  {
     timer;
 
     render(time) {
@@ -62,3 +64,4 @@ directive that was removed is subsequently re-connected to the DOM. Thus,
 async directives should always implement a reconnected callback to become 
 operational again after having been disconnected.
 */
+customElements.define('time-ago', TimeAgoDirective);

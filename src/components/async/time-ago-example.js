@@ -1,6 +1,7 @@
 import {html, LitElement} from 'lit-element';
-import {timeAgo} from './TimeAgo.js';
-import './CommentCard.js';
+import {timeAgo} from 'TimeAgo.js';
+import './time-ago.js'
+import './comment-card.js';
 
 const timeCreated = new Date();
 

@@ -1,14 +1,8 @@
-import { LitElement, css, html } from "lit-element";
+import {  css, html } from "lit-element";
+import {Page} from '../../components/layout/page-layout.js'
+import '../../components/async/time-ago-example.js'
 
-class Async extends LitElement {
-  static get styles() {
-    return [css`.page {padding: 0 10px}`];
-  }
-  render() {
-    return html` <div class="page">
-      <h1>This is Async Page</h1>
-    </div>`;
-  }
+class Async extends Page {
   static get properties() {
     return {
       eg: {
@@ -19,5 +13,13 @@ class Async extends LitElement {
   constructor() {
     super();
   }
+  render() {
+    return html` <div>
+      <h1>This is Async Page</h1>
+      <time-ago-example></time-ago-example>
+      
+    </div>`;
+  }
+  
 }
 customElements.define("async-page", Async);
